@@ -32,7 +32,7 @@
 
                 <h1>Login</h1>
 
-                <form class="form" action="">
+                <form class="form" action="./src/library.html">
 
                     <input type="text" name="" id="" placeholder="username">
                     <input type="email" name="" id="" placeholder="email">
@@ -47,7 +47,7 @@
 
                 <h1>Sign Up</h1>
 
-                <form class="form" action="">
+                <form class="form" action="./src/library.html">
 
                     <input type="text" name="" id="" placeholder="first name">
                     <input type="text" name="" id="" placeholder="last name">
@@ -63,6 +63,41 @@
 
         </div>
 
+
+        <script>
+
+            // --- DOM element Cache --- //
+            
+            //Tabs
+            const splash = document.getElementById("options")
+            const login = document.getElementById("login")
+            const signup = document.getElementById("signup")
+
+            login.style.display = "none";
+            signup.style.display = "none";
+            
+
+            //Options
+            const loginOption = document.getElementById("login-option");
+            const signUpOption = document.getElementById("signup-option");
+
+
+            // --- Functionality --- //
+
+            loginOption.addEventListener("click", () => {
+
+                splash.style.display = "none";
+                login.style.display = "flex"
+            })
+
+            
+            signUpOption.addEventListener("click", () => {
+
+                splash.style.display = "none";
+                signup.style.display = "flex"
+            })
+
+        </script>
     </body>
 
 </html>
