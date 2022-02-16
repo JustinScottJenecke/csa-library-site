@@ -2,26 +2,50 @@
 <html lang="en">
 
     <head>
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Library</title>
         <link rel="stylesheet" href="./css/theme.css">
         <link rel="stylesheet" href="./css/app.css">
+        <script src="https://unpkg.com/vue"></script>
+
     </head>
 
-    <body class="app-body">
+    <body >
  
-        <!-- Side Nav -->
-        <aside>
-            nav
-        </aside>
+        <div id="library-app" class="app-body">
+            <!-- Side Nav -->
+            <aside>
+                
+                <button>Icon</button>
+                <button>Username</button>
 
-        <!-- Main Area on right -->
-        <main>
-            app
-        </main>     
-        
+
+
+            </aside>
+
+            <!-- Main Area on right -->
+            <main>
+                
+                <header>
+
+                    <input type="text"> 
+                    <select name="" id="">
+                        <option value="bookName">Book Name</option>
+                        <option value="author">Author</option>
+                        <option value="genre">Genre</option>
+                    </select>
+                    <button>Search</button>
+
+                </header>
+                
+            </main>
+
+        </div>
+
+        <script src="./library.js"></script>
     </body>
     
 </html>
