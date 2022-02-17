@@ -1,3 +1,5 @@
+
+
 /* ---- Imports ---- */
 
 // User Principle
@@ -55,6 +57,7 @@ const signupFunction = () => {
     let newPassword = document.getElementById("password-input").value;
     let newPasswordConfirm = document.getElementById("password-input-confirm").value;
 
+    // Create new user object
     if (newPassword === newPasswordConfirm) {
 
         let newUser = {
@@ -66,10 +69,22 @@ const signupFunction = () => {
             
         };
 
+        // add user to database
         userTable.push(newUser)
 
         console.log("Updated succesfully!")
         console.log(userTable)
+
+        // log new user in
+        ACTIVE_USERNAME = newUser.username;
+        ACTIVE_USER_ROLE = newUser.role;
+        localStorage.setItem("csa-auth-user", ACTIVE_USERNAME);
+        localStorage.setItem("csa-auth-role", ACTIVE_USER_ROLE);
+
+        // redirect new user to app
+        window.location = ("./src/library.html")
+                    
+                
     } else {
         alert("Please confirm your password by entering the same password in both blocks")
     }
