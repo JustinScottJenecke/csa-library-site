@@ -1,9 +1,9 @@
-
+// create 2 mock users
 export const userTable = [    
     
     {
         "username" : "billy",
-        "role" : "user"
+        "role" : "member"
     },
     
     {
