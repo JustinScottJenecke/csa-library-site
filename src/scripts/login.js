@@ -1,4 +1,69 @@
+/* ---- Imports ---- */
 
 import { userTable } from "../database/users.js";
 
 console.log(userTable)
+
+// Get form sumbit buttons
+
+const loginOption = document.getElementById("login-action");
+const signUpOption = document.getElementById("signup-action");
+
+
+/*---------------------------
+    Login
+-----------------------------*/
+const loginFunction = () => {
+
+    // getDataFromFields
+    let username = document.getElementById("username-login");
+    let password = document.getElementById("password-login");
+
+};
+
+
+/*---------------------------
+    Sign up
+-----------------------------*/
+const signupFunction = () => {
+
+    // getDataFromFields
+    let newUsername = document.getElementById("username-input").value;
+    let newEmail = document.getElementById("email-input").value;
+    let newPassword = document.getElementById("password-input").value;
+    let newPasswordConfirm = document.getElementById("password-input-confirm").value;
+
+    if (newPassword === newPasswordConfirm) {
+
+        let newUser = {
+            
+            username : newUsername,
+            email : newEmail,
+            password : newPassword,
+            role : "member"
+            
+        };
+
+        userTable.push(newUser)
+
+        console.log("Updated succesfully!")
+        console.log(userTable)
+    } else {
+        alert("Please confirm your password by entering the same password in both blocks")
+    }
+};
+
+
+/*---------------------------
+    Event Handling and Interactivity
+-----------------------------*/
+
+loginOption.addEventListener("click", () => {
+    loginFunction()
+});
+
+
+
+signUpOption.addEventListener("click", () => {
+    signupFunction()
+});
