@@ -1,5 +1,10 @@
 /* ---- Imports ---- */
 
+// User Principle
+let ACTIVE_USERNAME;
+let ACTIVE_USER_ROLE;
+
+// User Database
 import { userTable } from "../database/users.js";
 
 console.log(userTable)
@@ -9,15 +14,32 @@ console.log(userTable)
 const loginOption = document.getElementById("login-action");
 const signUpOption = document.getElementById("signup-action");
 
-
 /*---------------------------
     Login
 -----------------------------*/
 const loginFunction = () => {
 
     // getDataFromFields
-    let username = document.getElementById("username-login");
-    let password = document.getElementById("password-login");
+    let username = document.getElementById("username-login").value;
+    let password = document.getElementById("password-login").value;
+
+    userTable.forEach(user => {
+        
+        if(username === user.username && password === user.password) {
+
+            // log user in
+            ACTIVE_USERNAME = username;
+            ACTIVE_USER_ROLE = user.role;
+
+            localStorage.setItem("csa-auth-user", ACTIVE_USERNAME);
+            localStorage.setItem("csa-auth-role", ACTIVE_USER_ROLE);
+
+            // redirect user to app
+            window.location = ("./src/library.html")
+            
+        }
+
+    });
 
 };
 
