@@ -1,9 +1,8 @@
 // Logged in user Global User
-let ACTIVE_USERNAME;
-let ACTIVE_USER_ROLE;
+
 
 // create 2 mock users
-export const userTable = [    
+export var userTable = [    
     
     {     
         username : "justin",
@@ -12,4 +11,11 @@ export const userTable = [
         role : "librarian"
         
     },
+    {     
+        username : "user",
+        email : "codespace.com",
+        password : "",
+        role : "member"
+        
+    }
 ];
