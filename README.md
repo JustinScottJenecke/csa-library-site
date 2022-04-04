@@ -1,4 +1,4 @@
-# JavaScript Library App
+# JavaScript Library Site
 
 ## Purpose:
 
