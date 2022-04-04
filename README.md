@@ -1,4 +1,4 @@
-# csa-user-authentication-app
+# JavaScript Library App
 
 ## Purpose:
 
