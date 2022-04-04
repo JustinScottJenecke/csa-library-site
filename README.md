@@ -1,2 +1,13 @@
 # csa-user-authentication-app
-CodeSpace User Authentication app - Library app with different entities, levels of authorization, database CRUD and display database info in the browser 
+
+## Purpose:
+
+- practice using localstorage/storage API
+- creating modals
+- import/export syntax
+
+## Status
+
+- <b>Incomplete Project</b>
+- still want to practice reading data from json file
+- promises
